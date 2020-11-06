@@ -238,7 +238,7 @@ func (r *ReconcileKeycloak) routeForKeycloak(keycloak *codewindv1alpha1.Keycloak
 		"nginx.ingress.kubernetes.io/rewrite-target":     "/",
 		"nginx.ingress.kubernetes.io/backend-protocol":   "HTTP",
 		"nginx.ingress.kubernetes.io/force-ssl-redirect": "true",
-		"kubernetes.io/ingress.class":                    "nginx",
+		"kubernetes.io/ingress.class":                    "istio",
 	}
 	route := &routev1.Route{
 		TypeMeta: metav1.TypeMeta{

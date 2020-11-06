@@ -513,7 +513,7 @@ func (r *ReconcileCodewind) ingressForCodewindGatekeeper(codewind *codewindv1alp
 		"ingress.bluemix.net/redirect-to-https":          "True",
 		"ingress.bluemix.net/ssl-services":               "ssl-service=" + deploymentOptions.CodewindGatekeeperServiceName,
 		"nginx.ingress.kubernetes.io/backend-protocol":   "HTTPS",
-		"kubernetes.io/ingress.class":                    "nginx",
+		"kubernetes.io/ingress.class":                    "istio",
 		"nginx.ingress.kubernetes.io/force-ssl-redirect": "true",
 	}
 	ingress := &extv1beta1.Ingress{
