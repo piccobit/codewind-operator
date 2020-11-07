@@ -1,6 +1,6 @@
 module github.com/eclipse/codewind-operator
 
-go 1.12 // TODO: jenkins currently using 1.12
+go 1.15
 
 require (
 	cloud.google.com/go v0.45.1 // indirect
@@ -48,3 +48,5 @@ replace (
 replace github.com/docker/docker => github.com/moby/moby v0.7.3-0.20190826074503-38ab9da00309 // Required by Helm
 
 replace github.com/openshift/api => github.com/openshift/api v0.0.0-20190924102528-32369d4db2ad // Required until https://github.com/operator-framework/operator-lifecycle-manager/pull/1241 is resolved
+
+replace github.com/eclipse/codewind-operator => github-com/piccobit/codewind-operator v0.14.2
