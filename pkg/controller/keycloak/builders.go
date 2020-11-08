@@ -280,7 +280,7 @@ func (r *ReconcileKeycloak) ingressForKeycloak(keycloak *codewindv1alpha1.Keyclo
 		"nginx.ingress.kubernetes.io/rewrite-target":     "/",
 		"nginx.ingress.kubernetes.io/backend-protocol":   "HTTP",
 		"nginx.ingress.kubernetes.io/force-ssl-redirect": "true",
-		"kubernetes.io/ingress.class":                    "nginx",
+		"kubernetes.io/ingress.class":                    "istio",
 	}
 	ingress := &extv1beta1.Ingress{
 		TypeMeta: metav1.TypeMeta{
