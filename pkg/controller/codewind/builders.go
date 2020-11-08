@@ -515,7 +515,7 @@ func (r *ReconcileCodewind) ingressForCodewindGatekeeper(codewind *codewindv1alp
 		"nginx.ingress.kubernetes.io/backend-protocol":   "HTTPS",
 		"kubernetes.io/ingress.class":                    "istio",
 		"nginx.ingress.kubernetes.io/force-ssl-redirect": "true",
-		"sidecar.istio.io/inject:": "true",
+		"sidecar.istio.io/inject": "true",
 	}
 	ingress := &extv1beta1.Ingress{
 		TypeMeta: metav1.TypeMeta{
